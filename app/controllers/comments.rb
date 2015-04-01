@@ -7,16 +7,18 @@ end
 
 get '/beers/:id/comments/new' do
   beer = Beer.find_by(id: params[:id])
-  erb :'comment/new', locals: {beer: beer}, layout: !request.xhr?
+  erb :'comment/new', locals: {beer: beer}, layout: false
 end
 
 # POST =======================
 
 post '/beers/:id/comments' do
-new_comment = Comment.new(content: params[:content], user_id: current_user.id, beer_id: params[:id])
-  if new_comment.save
-    redirect "/beers/#{params[:id]}/comments"
+beer = Beer.find_by(id: params[:id])
+comment = Comment.new(content: params[:content], user_id: current_user.id, beer_id: params[:id])
+
+  if comment.save
+    erb :'comment/_new_comment', locals: {beer: beer, comment: comment}, layout: false
   else
-    redirect "/beers/#{params[:id]}/comments/new"
+    [500, "OOPS, We messed up."]
   end
 end

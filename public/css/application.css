@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .beer_garden_header {
@@ -14,9 +14,15 @@ body {
   background-color: #CCCCCC;
 }
 
-h2, h3, h4, h5, h6 {
+h2, h3, h4, h5 {
   text-transform: uppercase;
   color: red;
+  font-style: bold;
+}
+
+h6 {
+  text-transform: uppercase;
+  color: black;
   font-style: bold;
 }
 

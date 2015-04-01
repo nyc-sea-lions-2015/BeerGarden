@@ -2,12 +2,11 @@
 <h3> Comments and Reviews </h3>
 
 <div id="comments">
-  <ol>
+  <ul>
     <% comments.each do |comment| %>
       <li><%=comment.user.username%>: <%=comment.content%></li>
     <%end%>
-  </ol>
-
+  </ul>
 </div>
 
 <a id="add_comment" href="/beers/<%=beer.id%>/comments/new">Add New Comment</a>
