@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   validates :username,  uniqueness: true
   validates_length_of :username,
   minimum: 5,
-  maximum: 15,
+  maximum: 15
   validates_length_of :password,
   :in => 6..20
 end
