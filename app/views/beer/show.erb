@@ -1,6 +1,11 @@
+<header>
+  <a href="/beers/<%=beer.id%>/edit">Edit Beer Information</a>
+  <a href='/beers'>See All Beers</a>
+</header>
+
 <h2> <%=beer.name%> </h2>
 <h6>Added by <%=beer.user.username%></li>
-<div>
+<div class='beer_info'>
   <ul>
     <li>Category: <%=beer.category%></li>
     <li>Percent Alcohol: <%=beer.alc_percent%></li>
@@ -8,6 +13,11 @@
   </ul>
 </div>
 
-<a href="/beers/<%=beer.id%>/edit">Edit Beer Information</a>
-<a href='/beers'>See All Beers</a>
-<a href='/beers/<%=beer.id%>/comments'>See All Comments</a>
+
+<h4>Comments</h4>
+
+<a href="/beers/<%=beer.id%>/comments">See All Comments</a>
+
+<a href="/beers/<%=beer.id%>/comments/new">Add New Comment</a>
+
+
