@@ -4,7 +4,7 @@
 <div>
   <ol>
     <% comments.each do |comment| %>
-      <li><%=comment.content%></li>
+      <li><%=comment.user.username%>: <%=comment.content%></li>
     <%end%>
   </ol>
 

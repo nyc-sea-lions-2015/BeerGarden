@@ -17,9 +17,10 @@
 
   <title></title>
 </head>
- <header>
-   <% if current_user %>
-    <hr>
+  <header>
+    <div class="beer_garden_header">BEER GARDEN</div>
+     <% if current_user %>
+     <hr>
       Logged in: <%= current_user.username %>  |
       <a href='/users/<%=current_user.id%>'>View Profile</a> |
       <a href='/logout'>Log Out</a>
