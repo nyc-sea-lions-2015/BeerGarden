@@ -8,12 +8,8 @@ get '/signup' do
 end
 
 get '/logout' do
-  if session[:user_id] = current_user.id
     session[:user_id] = nil
-    redirect '/login'
-  else
     redirect '/'
-  end
 end
 
 # POST ===========================
