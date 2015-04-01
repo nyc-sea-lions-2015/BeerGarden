@@ -1,0 +1,17 @@
+<h2>Edit My Account</h2>
+
+<h3><%=user.username%></h3>
+
+<div>
+  <form action="/users/<%=user.id%>" method='user'>
+    <input type='hidden' name='_method' value='put'/>
+
+    <input type='text' placeholder='enter first name here' name='first_name' value="<%=user.try(:first_name)%>" />
+    <input type='text' placeholder='url (optional)' name='last_name' value="<%=user.try(:last_name)%>" />
+    <input type='text' placeholder='enter location here' name='location' value="<%=user.try(:location)%>" />
+    <br>
+
+    <input type='submit' value='Edit'/>
+  </form>
+</div>
+
