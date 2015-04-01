@@ -1,0 +1,13 @@
+<div>
+  <a href='/beers/new'>Add New Beer</a>
+</div>
+
+<h2>Beers</h2>
+
+<div>
+  <ol>
+  <% beer.order(:category, :name).each do |beer| %>
+    <li><a href="/beers/<%=beer.id%>"><%=beer.category%>: <%=beer.name%></a></li>
+  <% end %>
+  </ol>
+</div>

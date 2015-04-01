@@ -1,0 +1,30 @@
+<div id='new_beer'>
+
+  <h3>Add New Beer</h3>
+
+  <form action='/beers' method='POST'>
+
+    <div>
+      <label class='label'>Name: </label>
+      <input type='text' name='name' placeholder='enter name of beer'/>
+
+  <!-- #TODO: Look for dropdown -->
+      <label class='label'>Category: </label>
+      <input type='text' name='category' placeholder='enter category of beer (e.g., stout)'/>
+
+      <label class='label'>Percent Alcohol: </label>
+      <input type='number' step='any' name='alc_percent' placeholder='enter percent alcohol'/>
+
+      <label class='label'>Description: </label>
+      <input type='text' name='description' placeholder='enter description of beer (optional)'/>
+
+    </div>
+    <input type='submit' value='Add New Beer'>
+  </form>
+
+</div>
+
+<div>
+  I'm thirsty. <a href='/beers'>Back to all beers.</a>
+</div>
+
