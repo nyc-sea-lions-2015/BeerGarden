@@ -1,0 +1,13 @@
+<h2> <%= beer.name %> </h2>
+<h3> Comments and Reviews </h3>
+
+<div>
+  <ol>
+    <% comments.each do |comment| %>
+      <li><%=comment.content%></li>
+    <%end%>
+  </ol>
+
+</div>
+
+<a href="/beers/<%=beer.id%>">Back to <%= beer.name %>'s Facts</a>
