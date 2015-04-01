@@ -1,0 +1,14 @@
+<h2> <%=user.username %></h2>
+
+<div class="user_info">
+  First Name: <%=user.first_name %>
+  Last Name: <%=user.last_name %>
+  Location: <%=user.location%>
+</div>
+
+<div>
+  <a href='/users/<%=user.id%>/edit'>Edit My Account</a>
+  <a href='/users/<%=user.id%>/delete'>Delete My Account</a>
+</div>
+
+<a href="/beers">Show me the way</a>
