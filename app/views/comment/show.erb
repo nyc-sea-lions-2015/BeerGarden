@@ -1,7 +1,7 @@
 <h2> <%= beer.name %> </h2>
 <h3> Comments and Reviews </h3>
 
-<div>
+<div id="comments">
   <ol>
     <% comments.each do |comment| %>
       <li><%=comment.user.username%>: <%=comment.content%></li>
@@ -9,5 +9,7 @@
   </ol>
 
 </div>
+
+<a id="add_comment" href="/beers/<%=beer.id%>/comments/new">Add New Comment</a>
 
 <a href="/beers/<%=beer.id%>">Back to <%= beer.name %>'s Facts</a>

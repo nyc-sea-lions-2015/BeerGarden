@@ -7,7 +7,7 @@ end
 
 get '/beers/:id/comments/new' do
   beer = Beer.find_by(id: params[:id])
-  erb :'comment/new', locals: {beer: beer}
+  erb :'comment/new', locals: {beer: beer}, layout: !request.xhr?
 end
 
 # POST =======================
