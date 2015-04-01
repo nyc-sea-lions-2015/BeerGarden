@@ -1,1 +1,16 @@
-edit.erb
+<h3>Edit Beer Information</h3>
+
+  <div>
+    <form action="/beers/<%=beer.id%>" method='POST'>
+    <input type='hidden' name='_method' value='put'/>
+      <%= erb :'beer/_beer_form', locals: {beer: beer} %>
+
+    <!-- layout: false -->
+
+    <input type='submit' value='Submit'>
+    </form>
+  </div>
+
+  <div>
+    I'm thirsty. <a href='/beers'>Back to all beers.</a>
+  </div>
