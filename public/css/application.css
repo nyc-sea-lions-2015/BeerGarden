@@ -1,0 +1,41 @@
+html {
+  font-family: sans-serif;
+}
+
+body {
+  font-size: 12px;
+}
+
+.beer_garden_header {
+  font-size: 28px;
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+  background-color: #CCCCCC;
+}
+
+h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+  color: red;
+  font-style: bold;
+}
+
+.comment_text {
+  font-size: 10px;
+  color: black;
+  text-align: left;
+}
+
+a {
+  color: black;
+  font-size: 12px;
+}
+
+a:visited {
+  color: gray;
+
+}
+
+a:hover {
+  color: red;
+}
