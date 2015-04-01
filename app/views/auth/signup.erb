@@ -1,0 +1,35 @@
+<div id='signup'>
+
+  <h3>Create New Account</h3>
+  <form action='/signup' method='POST'>
+    <div>
+      <label class='label'>Username: </label>
+      <input type='text' name='user[username]' placeholder='enter your username'/>
+    </div>
+    </h6 class="note">NOTE: Your username must be between 5 and 15 characters.</h6>
+
+    <div>
+      <label class='label'>Password: </label>
+      <input type='password' name='user[password]' placeholder='enter your password'/>
+      <input type='password' name='user[password_confirmation]' placeholder='re-enter your password'/>
+    </div>
+    </h6 class="note">NOTE: Your password must be between 6 and 20 characters.</h6>
+
+    <div>
+      <label class='label'>First Name: </label>
+      <input type='text' name='user[first_name]' placeholder='enter your first name'/>
+    </div>
+    <div>
+      <label class='label'>Last Name: </label>
+      <input type='text' name='user[last_name]' placeholder='enter your last name'/>
+    </div>
+    <div>
+      <label class='label'>Location: </label>
+      <input type='text' name='user[location]' placeholder='enter your location (e.g., New York, NY)'/>
+    </div>
+
+    <input type='submit' value='Create Account'>
+
+  </form>
+
+</div>
