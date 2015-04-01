@@ -1,0 +1,14 @@
+
+<div>
+    <label class='label'>Name: </label>
+    <input type='text' name='name' placeholder='enter name of beer' value="<%=beer.try(:name)%>"/>
+
+    <label class='label'>Category: </label>
+    <input type='text' name='category' placeholder='enter category of beer (e.g., stout)' value="<%=beer.try(:category)%>" />
+
+    <label class='label'>Percent Alcohol: </label>
+    <input type='integer' step='any' name='alc_percent' placeholder='enter percent alcohol (e.g., 3.4)' value="<%=beer.try(:alc_percent)%>"/>
+
+    <label class='label'>Description: </label>
+    <input type='text' name='description' placeholder='enter description of beer (optional)' value="<%=beer.try(:description)%>"/>
+</div>
