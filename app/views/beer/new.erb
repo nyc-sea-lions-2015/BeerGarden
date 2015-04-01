@@ -1,19 +1,17 @@
-<div id='new_beer'>
+<h3>Add New Beer</h3>
 
-  <h3>Add New Beer</h3>
-
+<div>
   <form action='/beers' method='POST'>
-
     <div>
+      <!-- TODO: ADD PARTIAL FORM -->
       <label class='label'>Name: </label>
       <input type='text' name='name' placeholder='enter name of beer'/>
 
-  <!-- #TODO: Look for dropdown -->
       <label class='label'>Category: </label>
       <input type='text' name='category' placeholder='enter category of beer (e.g., stout)'/>
 
       <label class='label'>Percent Alcohol: </label>
-      <input type='number' step='any' name='alc_percent' placeholder='enter percent alcohol'/>
+      <input type='integer' name='alc_percent' placeholder='enter percent alcohol (e.g., 3.4)'/>
 
       <label class='label'>Description: </label>
       <input type='text' name='description' placeholder='enter description of beer (optional)'/>
@@ -21,7 +19,6 @@
     </div>
     <input type='submit' value='Add New Beer'>
   </form>
-
 </div>
 
 <div>
