@@ -3,7 +3,7 @@ class CreateBeers < ActiveRecord::Migration
     create_table :beers do |t|
       t.string :name, null: false, unique: true
       t.string :category, null: false
-      t.integer :alc_percent, null: false
+      t.decimal :alc_percent, null: false
       t.string :description
       t.references :user, null: false
 
