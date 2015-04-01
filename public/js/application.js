@@ -1,7 +1,29 @@
 $(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
+   $('#add_comment').on('click', function(event){
+    event.preventDefault();
+    $target = $(event.target);
+    $target.hide();
+    var url = $target.attr('href');
+    $.ajax({
+      method: 'get',
+      url: url,
+      }).done(function(response){
+      $('#comments').append(response);
+    });
+  });
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+  $('#comments').on('submit', '#new_comment', function(event){
+    event.preventDefault();
+    $target = $(event.target);
+    var url = $target.attr('action');
+    var data = $target.serialize();
+    $.ajax({
+      method: "post",
+      url: url,
+      data: data,
+    }).done(function(response){
+      //TODO: FIX - appends to last comment without bullet; only works for first comment
+      $('#comments ul').append(response);
+    });
+  });
 });

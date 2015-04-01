@@ -22,7 +22,7 @@
      <% if current_user %>
      <hr>
       Logged in: <%= current_user.username %>  |
-      <a href='/users/<%=current_user.id%>'>View Profile</a> |
+      <a href='/users/<%=current_user.id%>'>User Profile</a> | <a href='/beers'>Beers</a> |
       <a href='/logout'>Log Out</a>
     <hr>
     <%else%>
