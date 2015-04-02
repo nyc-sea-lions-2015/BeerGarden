@@ -13,8 +13,12 @@ end
 # POST =======================
 
 post '/beers/:id/comments' do
-beer = Beer.find_by(id: params[:id])
-comment = Comment.new(content: params[:content], user_id: current_user.id, beer_id: params[:id])
+  beer = Beer.find_by(id: params[:id])
+  ## I think what I would do is:
+  # comment = beer.comments.build(params)
+  # comment.user = current_user
+  # comment.save
+  comment = Comment.new(content: params[:content], user_id: current_user.id, beer_id: params[:id])
 
   if comment.save
     erb :'comment/_new_comment', locals: {beer: beer, comment: comment}, layout: false

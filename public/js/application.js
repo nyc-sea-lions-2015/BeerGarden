@@ -8,8 +8,8 @@ $(document).ready(function() {
       method: 'get',
       url: url,
       }).done(function(response){
-      $('#comments').append(response);
-    });
+        $('#comments').append(response);
+      });
   });
 
   $('#comments').on('submit', '#new_comment', function(event){
@@ -23,7 +23,7 @@ $(document).ready(function() {
       data: data,
     }).done(function(response){
       //TODO: FIX - appends to last comment without bullet; only works for first comment
-      $('#comments ul').append(response);
+      $('#comments ul').append('<li>' + response + '</li>');
     });
   });
 });

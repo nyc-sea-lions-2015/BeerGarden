@@ -17,7 +17,7 @@ post '/signup' do
   new_user = User.new(params[:user])
   if new_user.save
     session[:user_id] = new_user.id
-    redirect '/beers'
+    redirect '/beers' ## Good redirect out of your post method!
   else
     redirect '/signup?error=notauthorized'
     #TODO: ADD ERROR VIEW TO REDIRECT TO SIGN UP

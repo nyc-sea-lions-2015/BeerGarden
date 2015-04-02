@@ -6,7 +6,10 @@
 
 <div>
   <ol>
-  <% beer.order(:category, :name).each do |beer| %>
+  <!-- Dont make active_record calls from inside your views - they are hard to debug
+  and refactor
+  -->
+  <% beer.each do |beer| %>
     <li><a href="/beers/<%=beer.id%>"><%=beer.category%>: <%=beer.name%></a></li>
   <% end %>
   </ol>
