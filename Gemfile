@@ -10,6 +10,8 @@ gem 'sinatra-contrib'
 gem 'activesupport', '~>4.2.0'
 gem 'activerecord', '~>4.2.0'
 
+gem 'rack', '< 1.6'
+
 gem 'rake'
 
 gem 'shotgun'
